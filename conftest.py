@@ -14,7 +14,9 @@ import test_data
 
 @pytest.fixture(scope="session")
 def driver(request):
+    #The getoption function handles the retrieval of browser name
     browser = request.config.getoption("--browser")
+
     if browser == "chrome":
         service = ChromeService(ChromeDriverManager().install())
         driver = webdriver.Chrome(service=service)
@@ -32,6 +34,8 @@ def driver(request):
     time.sleep(3)
     driver.quit()
 
-
+#With this pytest_addoption we can specify which browser we want to execute.
+#EX. pytest --browser=edge
+#By default if we dont specify browser the default browser would be chrome. EX. pytest
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
