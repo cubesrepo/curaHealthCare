@@ -18,7 +18,7 @@ class AppointmentPage(BasePage):
         time.sleep(1)
 
         # click book appointment
-        book_appt_btn = self.wait_clickable(test_data.appointment.BOOK_APPOINTMENT)
+        book_appt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
         self.action_click(book_appt_btn)
 
         time.sleep(1)
@@ -88,7 +88,7 @@ class AppointmentPage(BasePage):
         textdate = self.get_value(test_data.appointment.DATE)
 
         #click book appointment
-        book_apt_btn = self.wait_clickable(test_data.appointment.BOOK_APPOINTMENT)
+        book_apt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
         self.action_click(book_apt_btn)
 
         time.sleep(1)
@@ -130,7 +130,7 @@ class AppointmentPage(BasePage):
         self.action_click(comemnt)
 
         #click book appointment btn
-        book_appt_btn = self.wait_clickable(test_data.appointment.BOOK_APPOINTMENT)
+        book_appt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
         self.action_click(book_appt_btn)
 
         time.sleep(1)
