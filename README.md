@@ -1,6 +1,6 @@
 **Hello**🖐 **Automated Testing for Curahealthcare Demo Website with Selenium (Pytest, POM, HTML Reports, Jenkins Pipeline)**
 
-This project performs automation testing for the demo website Curahealthcare using Selenium, pytest, and the Page Object Model (POM) pattern. It includes an HTML report and a Jenkinsfile for Continuous Integration and Continuous Deployment (CI/CD).
+This project tests the functionalities of CuraHealthcare, including valid and invalid login attempts, viewing history, and managing appointments.
 ___________________________________________
 
 🎯 **Pre-requisites:**
