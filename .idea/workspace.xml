@@ -5,34 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0100687-65e5-4c21-b2ef-518b48134553" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_appointment_page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utilities/logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/appointment_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/appointment_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/history_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/history_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/login_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/profile_page.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/test_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/base_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_appointment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_history.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_history.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_login.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +49,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare\tests" />
       <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare\utilities" />
+      <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare\tests" />
     </key>
   </component>
   <component name="SharedIndexes">
