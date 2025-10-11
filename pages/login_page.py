@@ -1,69 +1,43 @@
-import time
-
-import test_data
+from pages.appointment_page import AppointmentPage
+from utilities import test_data
 from pages.base_page import BasePage
 
-
 class LoginPage(BasePage):
-    def check_login_without_username_and_password(self):
-        time.sleep(1)
-        # checking page title
-        assert self.title_is("CURA Healthcare Service")
+    def click_appointment(self):
+        appointment = self.wait_clickable(test_data.login.MAKE_APPOINTMENT)
+        appointment.click()
 
-        # click appointment button
-        self.wait_clickable(test_data.login.MAKE_APPOINTMENT).click()
+    def enter_username_password(self, username, password):
+        self.type(test_data.login.USERNAME, username)
+        self.type(test_data.login.PASSWORD, password)
 
-        #assert page url
-        assert self.url_is("https://katalon-demo-cura.herokuapp.com/profile.php#login")
-        #assert page title
-        assert self.title_is("CURA Healthcare Service")
-
-        #click login btn without username and password
+    def login(self):
         self.wait_clickable(test_data.login.LOGINBTN).click()
 
-        time.sleep(1)
-        #assertion of validation
-        assert self.get_text(
-            test_data.login.LOGIN_FAILED_VALIDATION) == "Login failed! Please ensure the username and password are valid."
+    def get_login_validation_error(self):
+        return self.get_text(test_data.login.LOGIN_FAILED_VALIDATION)
 
-    def check_login_without_username(self):
-        time.sleep(2)
+    def login_with_valid_credentials(self):
+        self.click_appointment()
+        self.enter_username_password(test_data.USER_CREDENTIALS["valid_username"],
+                                     test_data.USER_CREDENTIALS["valid_password"])
+        self.login()
+        return AppointmentPage(self.driver)
 
-        # input password
-        self.send_keys(test_data.login.PASSWORD, test_data.password)
-        time.sleep(1)
-        # click login btn
-        self.wait_clickable(test_data.login.LOGINBTN).click()
+    def login_without_entering_credentials(self):
+        self.click_appointment()
+        self.login()
+        login_validation_error = self.get_login_validation_error()
 
-        time.sleep(1)
-        # assertion of validation
-        assert self.get_text(
-            test_data.login.LOGIN_FAILED_VALIDATION) == "Login failed! Please ensure the username and password are valid."
-    def check_login_without_password(self):
-        time.sleep(2)
-        # input username
-        self.send_keys(test_data.login.USERNAME, test_data.username)
-        time.sleep(1)
-        # click login btn
-        self.wait_clickable(test_data.login.LOGINBTN).click()
+        return login_validation_error
 
-        time.sleep(1)
-        # assertion of validation
-        assert self.get_text(
-            test_data.login.LOGIN_FAILED_VALIDATION) == "Login failed! Please ensure the username and password are valid."
+    def login_with_invalid_credentials(self):
+        self.click_appointment()
+        self.enter_username_password(test_data.USER_CREDENTIALS["invalid_username"],
+                                     test_data.USER_CREDENTIALS["invalid_password"])
+        self.login()
+        login_validation_error = self.get_login_validation_error()
 
-    def valid_login(self):
-        time.sleep(2)
+        return login_validation_error
 
-        #input username
-        self.send_keys(test_data.login.USERNAME, test_data.username)
-        time.sleep(1)
-        #input password
-        self.send_keys(test_data.login.PASSWORD, test_data.password)
-        time.sleep(1)
-        #click login btn
-        self.wait_clickable(test_data.login.LOGINBTN).click()
-        time.sleep(1)
 
-        #check page url
-        assert self.url_is("https://katalon-demo-cura.herokuapp.com/#appointment")

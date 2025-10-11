@@ -1,151 +1,111 @@
-import time
-
-import test_data
+from utilities import test_data
 from pages.base_page import BasePage
 
 
 class AppointmentPage(BasePage):
-    def check_appointment_without_visit_date(self):
-        time.sleep(2)
+    def appointment_page_is_loaded(self):
+        return self.wait_visibility(test_data.appointment.MAKE_APPOINTMENT_HEADER) is not None
 
-        # click apply for readmission
-        self.wait_clickable(test_data.appointment.READDMISSION).click()
-        time.sleep(0.5)
+    def select_facility(self, facility_text):
+        self.select_dropdown_value(test_data.appointment.FACILITY, facility_text)
 
-        # add comment
-        comment = "Hello, I'd like to schedule an appointment"
-        self.send_keys(test_data.appointment.COMMENT, comment)
-        time.sleep(1)
+    def set_readmission(self, check=True):
+        self.set_option(test_data.appointment.READDMISSION, check)
 
-        # click book appointment
-        book_appt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
-        self.action_click(book_appt_btn)
+    def set_medical_aid(self):
+        self.set_option(test_data.appointment.MEDICAL_AID)
 
-        time.sleep(1)
+    def set_none(self):
+        self.set_option(test_data.appointment.NONE)
 
-        # assert validation message
-        assert self.get_validation_message(test_data.appointment.DATE) == "Please fill out this field."
+    def pick_date(self):
+        locators = ['DATE',
+                    'DAYS_HEADER',
+                    'MONTH',
+                    'DAY_25']
+        for locator in locators:
+            element_locator = getattr(test_data.appointment, locator)
+            self.wait_clickable(element_locator).click()
 
-
-    def valid_appointment(self):
-        time.sleep(2)
-        #click on comment to remove the display of the date picker
-        comment = self.wait_visibility(test_data.appointment.COMMENT)
-        self.action_click(comment)
-
-        time.sleep(2)
-        #click facility
-        facility = self.wait_visibility(test_data.appointment.FACILITY)
-        facility.click()
-
-        facility_value = "Seoul CURA Healthcare Center"
-        #select Seoul CURA Healthcare Center
-        select = self.select_by_visible_text(facility, facility_value)
-        self.action_click(select)
-        time.sleep(1)
+    def pick_past_date(self):
+        locators = ['DATE',
+                    'DAYS_HEADER',
+                    'MONTH_HEADER',
+                    'YEAR_2024',
+                    'MONTH_MARCH',
+                    'DAY_1']
+        for locator in locators:
+            element_locator = getattr(test_data.appointment, locator)
+            self.wait_clickable(element_locator).click()
 
 
-        #click medical aid radio btn
-        self.wait_clickable(test_data.appointment.MEDICAL_AID).click()
-        time.sleep(0.5)
+    def add_comment(self, comment_text):
+        self.action_click(test_data.appointment.COMMENT)
+        self.type(test_data.appointment.COMMENT, comment_text)
 
-        #click date
-        date = self.wait_visibility(test_data.appointment.DATE)
-        date.click()
-        time.sleep(0.5)
+    def book_appointment(self):
+        self.wait_clickable(test_data.appointment.BOOK_APPOINTMENT).click()
 
-        #click month header from date picker
-        month_header = self.wait_clickable(test_data.appointment.MONT_YEAR_HEADER)
-        self.action_click(month_header)
-        time.sleep(0.5)
+    def get_validation_fillout_fields(self):
+        return self.validation_fillout_this_field(test_data.appointment.DATE)
 
-        #click year header
-        year_header = self.wait_clickable(test_data.appointment.YEAR_HEADER)
-        self.action_click(year_header)
-        time.sleep(0.5)
+    def appointment_confirmation_is_loaded(self):
+       return self.get_text(test_data.appointment_confirmation.TEXT_APPT_CONFIRMATION)
 
-        #select year 2025
-        year_2025 = self.wait_clickable(test_data.appointment.YEAR_2025)
-        self.action_click(year_2025)
-        time.sleep(0.5)
+    def check_facility(self):
+        return self.get_text(test_data.appointment_confirmation.FACILITY_LABEL)
 
-        #select month dec
-        month_dec = self.wait_clickable(test_data.appointment.MONTH)
-        self.action_click(month_dec)
-        time.sleep(0.5)
+    def check_all_fields(self):
 
-        #select day 25
-        day_25 = self.wait_clickable(test_data.appointment.DAY_25)
-        self.action_click(day_25)
-        time.sleep(0.5)
+        locators = ['FACILITY_LABEL', 'READMISSION_LABEL', 'PROGRAM_LABEL',
+                    'DATE_LABEL', 'COMMENT_LABEL'
+        ]
 
-        #add comment
-        comment = "Hello, I'd like to schedule an appointment"
-        self.send_keys(test_data.appointment.COMMENT, comment)
-        time.sleep(0.5)
+        text_values = []
 
-        #retreive the date
-        textdate = self.get_value(test_data.appointment.DATE)
+        for locator in locators:
+            element_locator = getattr(test_data.appointment_confirmation, locator)
+            text_value = self.get_text(element_locator)
 
-        #click book appointment
-        book_apt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
-        self.action_click(book_apt_btn)
+            text_values.append(text_value)
 
-        time.sleep(1)
-        #assertion of url page
-        assert self.url_is("https://katalon-demo-cura.herokuapp.com/appointment.php#summary")
-        #assertion of text confirm
-        assert self.get_text(test_data.appointment.TEXT_APPT_CONFIRMATION) == "Appointment Confirmation"
-        #assertion  of facility label
-        assert self.get_text(test_data.appointment.FACILITY_LABEL) == facility_value
-        #assertion readmission
-        assert self.get_text(test_data.appointment.READMISSION_LABEL) == "Yes"
-        #assertion of healthcare program
-        assert self.get_text(test_data.appointment.PROGRAM_LABEL) == "Medicaid"
-        #date assertion
-        assert self.get_text(test_data.appointment.DATE_LABEL) == str(textdate)
-        #comment assertion
-        assert self.get_text(test_data.appointment.COMMENT_LABEL) == comment
+        return text_values
 
-    def check_appointment_without_comment_and_readmission(self):
-        time.sleep(1.5)
-        # checking page title
-        assert self.title_is("CURA Healthcare Service")
+    def verify_valid_appointment(self):
+        self.select_facility("Hongkong CURA Healthcare Center")
+        self.set_readmission()
+        self.set_medical_aid()
+        self.pick_date()
+        self.add_comment("Appointment for December 25")
+        self.book_appointment()
 
-        # click appointment button
-        self.wait_clickable(test_data.login.MAKE_APPOINTMENT).click()
+        return self.appointment_confirmation_is_loaded()
 
-        time.sleep(1)
-        # click none radio button
-        none_radio_btn = self.wait_clickable(test_data.appointment.NONE_PROGRAMS)
-        self.action_click(none_radio_btn)
+    def verify_appointment_wihout_visitdate(self):
+        self.select_facility("Hongkong CURA Healthcare Center")
+        self.set_readmission()
+        self.set_medical_aid()
+        self.add_comment("Appointment without a date")
+        self.book_appointment()
 
-        time.sleep(0.5)
-        #input date without using datepicker
-        date_value = "10/03/2029"
-        self.send_keys(test_data.appointment.DATE, date_value)
+        return self.get_validation_fillout_fields(), self.appointment_confirmation_is_loaded()
 
-        #click comment to remove the display of the datepicker
-        comemnt = self.wait_visibility(test_data.appointment.COMMENT)
-        self.action_click(comemnt)
+    def verify_appt_past_date(self):
+        self.select_facility("Seoul CURA Healthcare Center")
+        self.set_readmission()
+        self.set_readmission(False)
+        self.pick_past_date()
+        self.add_comment("Test past date")
+        self.book_appointment()
 
-        #click book appointment btn
-        book_appt_btn = self.wait_presence(test_data.appointment.BOOK_APPOINTMENT)
-        self.action_click(book_appt_btn)
+        return self.appointment_confirmation_is_loaded()
 
-        time.sleep(1)
-        # assertion of url page
-        assert self.url_is("https://katalon-demo-cura.herokuapp.com/appointment.php#summary")
-        # assertion of text confirm
-        assert self.get_text(test_data.appointment.TEXT_APPT_CONFIRMATION) == "Appointment Confirmation"
-        # assertion  of facility label
-        assert self.get_text(test_data.appointment.FACILITY_LABEL) == "Tokyo CURA Healthcare Center"
-        # assertion readmission
-        assert self.get_text(test_data.appointment.READMISSION_LABEL) == "No"
-        # assertion of healthcare program
-        assert self.get_text(test_data.appointment.PROGRAM_LABEL) == "None"
-        # date assertion
-        assert self.get_text(test_data.appointment.DATE_LABEL) == date_value
-        # comment assertion
-        assert self.get_text_wait_presence(test_data.appointment.COMMENT_LABEL) == ""
+    def verify_appt_confirmation_fields(self):
+        self.set_readmission()
+        self.set_none()
+        self.pick_date()
+        self.add_comment("Test appointment confirmation fields.")
+        self.book_appointment()
+
+        return self.appointment_confirmation_is_loaded(), self.check_all_fields()
 
