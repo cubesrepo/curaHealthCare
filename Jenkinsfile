@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     tools {
-        python 'Python3'
+        jenkins.plugins.shiningpanda.tools.PythonInstallation 'Python3'
     }
     stages{
         stage("Check out"){
