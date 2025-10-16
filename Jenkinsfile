@@ -4,7 +4,6 @@ pipeline{
     stages{
         stage("Check out"){
             steps{
-                where git
                 git 'https://github.com/cubesrepo/curaHealthCare'
 
             }
