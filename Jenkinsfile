@@ -1,6 +1,8 @@
 pipeline{
     agent any
-
+    tools{
+        python 'Python311'
+    }
     stages{
         stage("Check out"){
             steps{
