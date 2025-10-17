@@ -20,8 +20,17 @@ pipeline{
         }
         stage("Run tests"){
             steps{
-                bat 'virtualenv\\Scripts\\activate && pytest -v --alluredir=reports/testJenkins --headless'
+                bat 'virtualenv\\Scripts\\activate && pytest -m login --alluredir=reports/testJenkins --headless'
             }
+        }
+    }
+    post {
+        always {
+            allure([
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'reports/testJenkins']]
+            ])
         }
     }
 }
