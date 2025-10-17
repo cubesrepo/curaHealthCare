@@ -15,7 +15,7 @@ pipeline{
         stage("Install dependencies and setup"){
             steps{
                 bat 'python -m venv virtualenv'
-                bat 'virtualenv\\Scripts\\activate && pip install -r requirements.txt'
+                bat 'virtualenv\\Scripts\\activate && pip install -r utilities/requirements.txt'
             }
         }
         stage("Run tests"){
