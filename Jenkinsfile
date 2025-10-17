@@ -1,8 +1,10 @@
 pipeline{
     agent any
+
     environment{
-        PYTHON_VERSION '3.11.9'
+        PYTHON_VERSION = "3.11.9"
     }
+
     stages{
         stage("Check out"){
             steps{
