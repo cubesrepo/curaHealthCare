@@ -1,7 +1,7 @@
 pipeline{
     agent any
-    tools{
-        python 'Python311'
+    environment{
+        PYTHON_VERSION '3.11.9'
     }
     stages{
         stage("Check out"){
