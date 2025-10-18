@@ -25,12 +25,12 @@ class appointment:
     MEDICAL_AID = By.XPATH, "//label[normalize-space()='Medicaid']"
     NONE = By.XPATH, "//label[normalize-space()='None']"
     DATE = By.XPATH, "//input[@name='visit_date']"
-    DAYS_HEADER = By.CSS_SELECTOR, ".datepicker .datepicker-days th.datepicker-switch"
-    MONTH_HEADER = By.CSS_SELECTOR, ".datepicker .datepicker-months th.datepicker-switch"
-    YEAR_HEADER = By.CSS_SELECTOR, ".datepicker .datepicker-years th.datepicker-switch"
+    DAYS_HEADER = By.CSS_SELECTOR, "div[class='datepicker-days'] th[class='datepicker-switch']"
+    MONTH_HEADER = By.CSS_SELECTOR, "div[class='datepicker-months'] th[class='datepicker-switch']"
+    YEAR_HEADER = By.CSS_SELECTOR, "div[class='datepicker-years'] th[class='datepicker-switch']"
     YEAR_2026 = By.XPATH, "//span[normalize-space()='2026']"
     MONTH = By.XPATH, "//span[@class='month' and text()='Dec']"
-    DAY_25 = By.XPATH, "//td[@class='day' and text()='25']"
+    DAY_25 = By.CSS_SELECTOR, "//td[@class='day' and text()='25']"
 
     YEAR_2024 = By.XPATH, "//span[normalize-space()='2024']"
     MONTH_MARCH = By.XPATH, "//span[@class='month' and text()='Mar']"
@@ -40,7 +40,7 @@ class appointment:
     BOOK_APPOINTMENT = By.XPATH, "//button[@id='btn-book-appointment']"
 
 class appointment_confirmation:
-    TEXT_APPT_CONFIRMATION = By.XPATH, "//h2[normalize-space()='Appointment Confirmation']"
+    TEXT_APPT_CONFIRMATION = By.XPATH, "(//h2[normalize-space()='Appointment Confirmation'])[1]"
     APPT_CONFIRMATION_MESSAGE = "Appointment Confirmation"
     FACILITY_LABEL = By.XPATH, "//p[@id='facility']"
     READMISSION_LABEL = By.XPATH, "//p[@id='hospital_readmission']"

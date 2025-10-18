@@ -1,6 +1,6 @@
 from utilities import test_data
 from pages.base_page import BasePage
-
+import time
 
 class AppointmentPage(BasePage):
     def appointment_page_is_loaded(self):
@@ -37,6 +37,7 @@ class AppointmentPage(BasePage):
         for locator in locators:
             element_locator = getattr(test_data.appointment, locator)
             self.wait_clickable(element_locator).click()
+            time.sleep(1)
 
 
     def add_comment(self, comment_text):

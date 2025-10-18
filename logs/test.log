@@ -1,124 +1,101 @@
-2025-10-11 13:09:01,187 [INFO] [test_valid_appointment]: ===== Test session started =====
-2025-10-11 13:09:05,161 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
-2025-10-11 13:09:05,656 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
-2025-10-11 13:09:05,656 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
-2025-10-11 13:09:05,748 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
-2025-10-11 13:09:05,748 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
-2025-10-11 13:09:05,871 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
-2025-10-11 13:09:06,577 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
-2025-10-11 13:09:06,592 [INFO] AppointmentPage: Selecting 'Hongkong CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
-2025-10-11 13:09:06,673 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
-2025-10-11 13:09:06,673 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
-2025-10-11 13:09:06,723 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
-2025-10-11 13:09:06,744 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='Medicaid']")
-2025-10-11 13:09:06,744 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='Medicaid']") to checked
-2025-10-11 13:09:06,786 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='Medicaid']") state changed
-2025-10-11 13:09:06,809 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
-2025-10-11 13:09:06,897 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']")
-2025-10-11 13:09:06,983 [INFO] AppointmentPage: Element is clickable: ('xpath', "//span[@class='month' and text()='Dec']")
-2025-10-11 13:09:07,062 [INFO] AppointmentPage: Element is clickable: ('xpath', "//td[@class='day' and text()='25']")
-2025-10-11 13:09:07,122 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:07,122 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:07,402 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
-2025-10-11 13:09:07,435 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:07,435 [INFO] AppointmentPage: Typing 'Appointment for December 25' into ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:07,557 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
-2025-10-11 13:09:08,034 [INFO] AppointmentPage: Element is visible: ('xpath', "//h2[normalize-space()='Appointment Confirmation']")
-2025-10-11 13:09:08,050 [INFO] AppointmentPage: The element:('xpath', "//h2[normalize-space()='Appointment Confirmation']") has text: Appointment Confirmation
-2025-10-11 13:09:12,542 [INFO] [test_valid_appointment]: ===== Test session ended =====
+2025-10-18 15:22:58,851 [INFO] [test_valid_appointment]: ===== Test session started =====
+2025-10-18 15:23:07,420 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
+2025-10-18 15:23:08,411 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
+2025-10-18 15:23:08,411 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
+2025-10-18 15:23:08,477 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
+2025-10-18 15:23:08,477 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
+2025-10-18 15:23:08,535 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
+2025-10-18 15:23:09,072 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
+2025-10-18 15:23:09,078 [INFO] AppointmentPage: Selecting 'Hongkong CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
+2025-10-18 15:23:09,127 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
+2025-10-18 15:23:09,127 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
+2025-10-18 15:23:09,164 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
+2025-10-18 15:23:09,180 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='Medicaid']")
+2025-10-18 15:23:09,180 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='Medicaid']") to checked
+2025-10-18 15:23:09,216 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='Medicaid']") state changed
+2025-10-18 15:23:09,232 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
+2025-10-18 15:23:09,295 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']")
+2025-10-18 15:23:09,347 [INFO] AppointmentPage: Element is clickable: ('xpath', "//span[@class='month' and text()='Dec']")
+2025-10-18 15:23:09,412 [INFO] AppointmentPage: Element is clickable: ('css selector', 'tbody tr:nth-child(4) td:nth-child(5)')
+2025-10-18 15:23:09,483 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:09,483 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:09,756 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
+2025-10-18 15:23:09,771 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:09,771 [INFO] AppointmentPage: Typing 'Appointment for December 25' into ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:09,829 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
+2025-10-18 15:23:20,123 [INFO] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 10
+2025-10-18 15:23:30,461 [INFO] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 10
+2025-10-18 15:23:30,461 [WARNING] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 2 retries
+2025-10-18 15:23:30,462 [INFO] AppointmentPage: Unable to get text. Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") not found.
+2025-10-18 15:23:34,853 [INFO] [test_valid_appointment]: ===== Test session ended =====
 
-2025-10-11 13:09:16,607 [INFO] [test_appointment_without_visit_date]: ===== Test session started =====
-2025-10-11 13:09:21,261 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
-2025-10-11 13:09:21,807 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
-2025-10-11 13:09:21,807 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
-2025-10-11 13:09:21,918 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
-2025-10-11 13:09:21,918 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
-2025-10-11 13:09:22,024 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
-2025-10-11 13:09:22,643 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
-2025-10-11 13:09:22,660 [INFO] AppointmentPage: Selecting 'Hongkong CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
-2025-10-11 13:09:22,746 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
-2025-10-11 13:09:22,746 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
-2025-10-11 13:09:22,834 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
-2025-10-11 13:09:22,880 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='Medicaid']")
-2025-10-11 13:09:22,880 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='Medicaid']") to checked
-2025-10-11 13:09:22,989 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='Medicaid']") state changed
-2025-10-11 13:09:23,029 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:23,029 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:23,333 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
-2025-10-11 13:09:23,361 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:23,361 [INFO] AppointmentPage: Typing 'Appointment without a date' into ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:23,542 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
-2025-10-11 13:09:23,644 [INFO] AppointmentPage: Element is visible: ('xpath', "//input[@name='visit_date']")
-2025-10-11 13:09:23,644 [INFO] AppointmentPage: Element is visible: ('xpath', "//input[@name='visit_date']")
-2025-10-11 13:09:33,960 [INFO] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 10
-2025-10-11 13:09:33,962 [INFO] AppointmentPage: Unable to get text. Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") not found.
-2025-10-11 13:09:38,378 [INFO] [test_appointment_without_visit_date]: ===== Test session ended =====
+2025-10-18 15:23:34,857 [INFO] [test_appointment_without_visit_date]: ===== Test session started =====
+2025-10-18 15:23:39,524 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
+2025-10-18 15:23:40,149 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
+2025-10-18 15:23:40,149 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
+2025-10-18 15:23:40,220 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
+2025-10-18 15:23:40,221 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
+2025-10-18 15:23:40,281 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
+2025-10-18 15:23:40,798 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
+2025-10-18 15:23:40,812 [INFO] AppointmentPage: Selecting 'Hongkong CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
+2025-10-18 15:23:40,879 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
+2025-10-18 15:23:40,879 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
+2025-10-18 15:23:40,929 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
+2025-10-18 15:23:40,952 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='Medicaid']")
+2025-10-18 15:23:40,953 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='Medicaid']") to checked
+2025-10-18 15:23:40,997 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='Medicaid']") state changed
+2025-10-18 15:23:41,020 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:41,021 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:41,299 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
+2025-10-18 15:23:41,317 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:41,318 [INFO] AppointmentPage: Typing 'Appointment without a date' into ('xpath', "//textarea[@name='comment']")
+2025-10-18 15:23:41,395 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
+2025-10-18 15:23:41,452 [INFO] AppointmentPage: Element is visible: ('xpath', "//input[@name='visit_date']")
+2025-10-18 15:23:41,452 [INFO] AppointmentPage: Element is visible: ('xpath', "//input[@name='visit_date']")
+2025-10-18 15:23:51,804 [INFO] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 10
+2025-10-18 15:24:02,139 [INFO] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 10
+2025-10-18 15:24:02,139 [WARNING] AppointmentPage: Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") is not found after 2 retries
+2025-10-18 15:24:02,140 [INFO] AppointmentPage: Unable to get text. Element: ('xpath', "//h2[normalize-space()='Appointment Confirmation']") not found.
+2025-10-18 15:24:06,381 [INFO] [test_appointment_without_visit_date]: ===== Test session ended =====
 
-2025-10-11 13:09:42,444 [INFO] [test_appt_past_date]: ===== Test session started =====
-2025-10-11 13:09:46,618 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
-2025-10-11 13:09:47,135 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
-2025-10-11 13:09:47,135 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
-2025-10-11 13:09:47,317 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
-2025-10-11 13:09:47,317 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
-2025-10-11 13:09:47,427 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
-2025-10-11 13:09:48,126 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
-2025-10-11 13:09:48,137 [INFO] AppointmentPage: Selecting 'Seoul CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
-2025-10-11 13:09:48,223 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
-2025-10-11 13:09:48,223 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
-2025-10-11 13:09:48,316 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
-2025-10-11 13:09:48,336 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
-2025-10-11 13:09:48,336 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to unchecked
-2025-10-11 13:09:48,373 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
-2025-10-11 13:09:48,411 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
-2025-10-11 13:09:48,543 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']")
-2025-10-11 13:09:48,660 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-months'] th[class='datepicker-switch']")
-2025-10-11 13:09:48,776 [INFO] AppointmentPage: Element is clickable: ('xpath', "//span[normalize-space()='2024']")
-2025-10-11 13:09:48,901 [INFO] AppointmentPage: Element is clickable: ('xpath', "//span[@class='month' and text()='Mar']")
-2025-10-11 13:09:48,958 [INFO] AppointmentPage: Element is clickable: ('xpath', "//td[@class='day' and text()='1']")
-2025-10-11 13:09:49,012 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:49,012 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:49,285 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
-2025-10-11 13:09:49,345 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:49,345 [INFO] AppointmentPage: Typing 'Test past date' into ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:09:49,427 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
-2025-10-11 13:09:49,762 [INFO] AppointmentPage: Element is visible: ('xpath', "//h2[normalize-space()='Appointment Confirmation']")
-2025-10-11 13:09:49,779 [INFO] AppointmentPage: The element:('xpath', "//h2[normalize-space()='Appointment Confirmation']") has text: Appointment Confirmation
-2025-10-11 13:09:54,136 [INFO] [test_appt_past_date]: ===== Test session ended =====
+2025-10-18 15:24:10,457 [INFO] [test_appt_past_date]: ===== Test session started =====
+2025-10-18 15:24:14,594 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
+2025-10-18 15:24:15,342 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
+2025-10-18 15:24:15,343 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
+2025-10-18 15:24:15,411 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
+2025-10-18 15:24:15,411 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
+2025-10-18 15:24:15,471 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
+2025-10-18 15:24:15,981 [INFO] AppointmentPage: Element is clickable: ('xpath', "//select[@name='facility']")
+2025-10-18 15:24:15,996 [INFO] AppointmentPage: Selecting 'Seoul CURA Healthcare Center' from ('xpath', "//select[@name='facility']") by value
+2025-10-18 15:24:16,046 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
+2025-10-18 15:24:16,046 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
+2025-10-18 15:24:16,083 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
+2025-10-18 15:24:16,099 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
+2025-10-18 15:24:16,100 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to unchecked
+2025-10-18 15:24:16,139 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
+2025-10-18 15:24:16,163 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
+2025-10-18 15:24:17,259 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']")
+2025-10-18 15:24:28,316 [INFO] AppointmentPage: Element: ('css selector', "div[class='datepicker-months'] th[class='datepicker-switch']") is not found after 10
+2025-10-18 15:24:38,354 [INFO] AppointmentPage: Element: ('css selector', "div[class='datepicker-months'] th[class='datepicker-switch']") is not found after 10
+2025-10-18 15:24:38,354 [WARNING] AppointmentPage: Element: ('css selector', "div[class='datepicker-months'] th[class='datepicker-switch']") not found after 2 retries
+2025-10-18 15:24:42,592 [INFO] [test_appt_past_date]: ===== Test session ended =====
 
-2025-10-11 13:09:58,225 [INFO] [test_appt_confirmation_fields]: ===== Test session started =====
-2025-10-11 13:10:02,459 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
-2025-10-11 13:10:02,965 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
-2025-10-11 13:10:02,965 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
-2025-10-11 13:10:03,114 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
-2025-10-11 13:10:03,114 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
-2025-10-11 13:10:03,238 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
-2025-10-11 13:10:03,947 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
-2025-10-11 13:10:03,947 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
-2025-10-11 13:10:04,053 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
-2025-10-11 13:10:04,116 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='None']")
-2025-10-11 13:10:04,116 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='None']") to checked
-2025-10-11 13:10:04,219 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='None']") state changed
-2025-10-11 13:10:04,261 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
-2025-10-11 13:10:04,380 [INFO] AppointmentPage: Element is clickable: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']")
-2025-10-11 13:10:04,476 [INFO] AppointmentPage: Element is clickable: ('xpath', "//span[@class='month' and text()='Dec']")
-2025-10-11 13:10:04,609 [INFO] AppointmentPage: Element is clickable: ('xpath', "//td[@class='day' and text()='25']")
-2025-10-11 13:10:04,744 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:10:04,744 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:10:05,036 [INFO] AppointmentPage: Element ('xpath', "//textarea[@name='comment']"): has been clicked
-2025-10-11 13:10:05,074 [INFO] AppointmentPage: Element is clickable: ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:10:05,074 [INFO] AppointmentPage: Typing 'Test appointment confirmation fields.' into ('xpath', "//textarea[@name='comment']")
-2025-10-11 13:10:05,225 [INFO] AppointmentPage: Element is clickable: ('xpath', "//button[@id='btn-book-appointment']")
-2025-10-11 13:10:05,670 [INFO] AppointmentPage: Element is visible: ('xpath', "//h2[normalize-space()='Appointment Confirmation']")
-2025-10-11 13:10:05,687 [INFO] AppointmentPage: The element:('xpath', "//h2[normalize-space()='Appointment Confirmation']") has text: Appointment Confirmation
-2025-10-11 13:10:05,719 [INFO] AppointmentPage: Element is visible: ('xpath', "//p[@id='facility']")
-2025-10-11 13:10:05,734 [INFO] AppointmentPage: The element:('xpath', "//p[@id='facility']") has text: Tokyo CURA Healthcare Center
-2025-10-11 13:10:05,775 [INFO] AppointmentPage: Element is visible: ('xpath', "//p[@id='hospital_readmission']")
-2025-10-11 13:10:05,789 [INFO] AppointmentPage: The element:('xpath', "//p[@id='hospital_readmission']") has text: Yes
-2025-10-11 13:10:05,826 [INFO] AppointmentPage: Element is visible: ('xpath', "//p[@id='program']")
-2025-10-11 13:10:05,839 [INFO] AppointmentPage: The element:('xpath', "//p[@id='program']") has text: None
-2025-10-11 13:10:05,877 [INFO] AppointmentPage: Element is visible: ('xpath', "//p[@id='visit_date']")
-2025-10-11 13:10:05,890 [INFO] AppointmentPage: The element:('xpath', "//p[@id='visit_date']") has text: 25/12/2025
-2025-10-11 13:10:05,915 [INFO] AppointmentPage: Element is visible: ('xpath', "//div[@class='col-xs-8']/p[@id='comment']")
-2025-10-11 13:10:05,927 [INFO] AppointmentPage: The element:('xpath', "//div[@class='col-xs-8']/p[@id='comment']") has text: Test appointment confirmation fields.
-2025-10-11 13:10:10,343 [INFO] [test_appt_confirmation_fields]: ===== Test session ended =====
+2025-10-18 15:24:42,595 [INFO] [test_appt_confirmation_fields]: ===== Test session started =====
+2025-10-18 15:24:47,941 [INFO] LoginPage: Element is clickable: ('xpath', "//a[@id='btn-make-appointment']")
+2025-10-18 15:24:48,886 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='username']")
+2025-10-18 15:24:48,886 [INFO] LoginPage: Typing 'John Doe' into ('xpath', "//input[@name='username']")
+2025-10-18 15:24:48,996 [INFO] LoginPage: Element is clickable: ('xpath', "//input[@name='password']")
+2025-10-18 15:24:48,997 [INFO] LoginPage: Typing 'ThisIsNotAPassword' into ('xpath', "//input[@name='password']")
+2025-10-18 15:24:49,077 [INFO] LoginPage: Element is clickable: ('xpath', "//button[@id='btn-login']")
+2025-10-18 15:24:50,122 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='hospital_readmission']")
+2025-10-18 15:24:50,122 [INFO] AppointmentPage: Setting element ('xpath', "//input[@name='hospital_readmission']") to checked
+2025-10-18 15:24:50,173 [INFO] AppointmentPage: Element ('xpath', "//input[@name='hospital_readmission']") state changed
+2025-10-18 15:24:50,203 [INFO] AppointmentPage: Element is clickable: ('xpath', "//label[normalize-space()='None']")
+2025-10-18 15:24:50,204 [INFO] AppointmentPage: Setting element ('xpath', "//label[normalize-space()='None']") to checked
+2025-10-18 15:24:50,255 [INFO] AppointmentPage: Element ('xpath', "//label[normalize-space()='None']") state changed
+2025-10-18 15:24:50,280 [INFO] AppointmentPage: Element is clickable: ('xpath', "//input[@name='visit_date']")
+2025-10-18 15:25:00,683 [INFO] AppointmentPage: Element: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']") is not found after 10
+2025-10-18 15:25:11,062 [INFO] AppointmentPage: Element: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']") is not found after 10
+2025-10-18 15:25:11,062 [WARNING] AppointmentPage: Element: ('css selector', "div[class='datepicker-days'] th[class='datepicker-switch']") not found after 2 retries
+2025-10-18 15:25:15,259 [INFO] [test_appt_confirmation_fields]: ===== Test session ended =====
 
