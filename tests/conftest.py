@@ -2,7 +2,6 @@ import os
 import time
 from datetime import datetime
 from multiprocessing.util import get_logger
-from time import strftime
 
 import pytest
 from selenium import webdriver
@@ -12,7 +11,7 @@ from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.webdriver.edge.options import Options as EdgeOptions
 from selenium.webdriver.firefox.service import Service as GeckoService
 from selenium.webdriver.firefox.options import Options as GeckoOptions
-from urllib3 import request
+
 
 from pages.login_page import LoginPage
 from utilities import test_data

@@ -4,7 +4,7 @@ This project tests the functionalities of CuraHealthcare, including valid and in
 ___________________________________________
 
 🎯 **Pre-requisites:**
-- Python 3
+- Python 3.11.9
 - Any browsers(Chrome, Firefox, Edge)
 ___________________________________________
 
@@ -14,12 +14,12 @@ Run commands:
 1. Install Dependecies:
 
        pip install -r requirements.txt
-2. Run the test with html report:
+2. Run the test with Allure report:
 
-       pytest -v --html=report.html 
+       pytest -v --alluredir=reports/TestCase1
    or specifying browser
 
-       pytest -v --browser=edge --html=report.html
+       pytest -v --browser=edge --alluredir=reports/TestCase1
     
 
 **To run this on jenkins**

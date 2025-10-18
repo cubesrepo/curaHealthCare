@@ -25,6 +25,8 @@ class AppointmentPage(BasePage):
                     'DAY_25']
         for locator in locators:
             element_locator = getattr(test_data.appointment, locator)
+            if element_locator is None:
+                element_locator = getattr(test_data.appointment, locator)
             self.wait_clickable(element_locator).click()
 
     def pick_past_date(self):
