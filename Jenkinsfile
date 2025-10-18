@@ -5,7 +5,7 @@ pipeline{
         PYTHON_VERSION = "3.11.9"
         VENV_DIR = "virtualenv"
         VENV_ACTIVATE = "${VENV_DIR}\\Scripts\\activate"
-        ALLURE_REPORT = "reports/testJenkins"
+        ALLURE_REPORT = "reports/T1"
     }
 
     stages{
@@ -28,7 +28,7 @@ pipeline{
             steps{
                 echo "Running selenium pytest tests..."
                 bat """
-                call ${VENV_ACTIVATE} && pytest -m login --alluredir=${ALLURE_REPORT} --headless
+                call ${VENV_ACTIVATE} && pytest -v --alluredir=${ALLURE_REPORT} --headless
                 """
             }
         }
