@@ -28,7 +28,7 @@ pipeline{
             steps{
                 echo "Running selenium pytest tests..."
                 bat """
-                call ${VENV_ACTIVATE} && pytest -v --alluredir=${ALLURE_REPORT} --headless
+                call ${VENV_ACTIVATE} && pytest -v --delay=1 --alluredir=${ALLURE_REPORT} --headless
                 """
             }
         }

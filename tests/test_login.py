@@ -21,7 +21,6 @@ class TestLogin:
         assert current_result == expected_result, \
             f"Expected validation error to be {expected_result}, but got {current_result}"
 
-    @pytest.mark.skip
     def test_invalid_login(self, login_page):
         current_result = login_page.login_with_invalid_credentials()
         expected_result = test_data.login.LOGIN_FAILED_VALIDATION_MESSAGE
