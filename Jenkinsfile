@@ -20,8 +20,7 @@ pipeline{
                 echo "Setting up python environment"
                 bat """
                 python -m venv ${VENV_DIR}
-                call ${VENV_ACTIVATE}
-                pip install -r utilities/requirements.txt
+                call ${VENV_ACTIVATE} && pip install -r utilities/requirements.txt
                 """
             }
         }
@@ -29,8 +28,7 @@ pipeline{
             steps{
                 echo "Running selenium pytest tests..."
                 bat """
-                call ${VENV_ACTIVATE}
-                pytest -m login --alluredir=${ALLURE_REPORT} --headless
+                call ${VENV_ACTIVATE} && pytest -m login --alluredir=${ALLURE_REPORT} --headless
                 """
             }
         }
@@ -41,14 +39,16 @@ pipeline{
             allure([
                 includeProperties: false,
                 jdk: '',
-                results: [[path: '${ALLURE_REPORT}']]
+                results: [[path: "${ALLURE_REPORT}"]]
             ])
+            echo "Cleaning up worskpace.."
+            cleanWs()
         }
-        success{
-            echo "Test passed successfully!"
+        success {
+            echo "✅ Tests passed successfully!"
         }
-        failure{
-            echo "Test failed!"
+        failure {
+            echo "❌ Tests failed!"
         }
     }
 }
