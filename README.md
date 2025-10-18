@@ -1,6 +1,14 @@
-**Hello**🖐 **Automated Testing for Curahealthcare Demo Website with Selenium (Pytest, POM, HTML Reports, Jenkins Pipeline)**
+**Hello**🖐 **Automated Testing for Curahealthcare Demo Website with Selenium (Pytest, Page Object Model(POM), Allure Reports, Jenkins Pipeline)**
 
-This project tests the functionalities of CuraHealthcare, including valid and invalid login attempts, viewing history, and managing appointments.
+This project automates the testing of Cura Healthcare Service, covering key features such as login, appointment booking, and viewing history.
+
+Instead of focusing only on the happy path, I also tested multiple edge cases to verify the system’s stability and reliability.
+These include:
+   - Logging in without a username or password
+   - Logging in with invalid credentials 
+   - Booking an appointment without selecting a visit date 
+   - Booking an appointment with a past date 
+   - Viewing history when no appointments exist
 ___________________________________________
 
 🎯 **Pre-requisites:**
@@ -24,12 +32,12 @@ Run commands:
 
 **To run this on jenkins**
 1. Add item name, click Pipeline and click OK
-   ![img_1.png](img_1.png)
+   ![img_1.png](img_1.png) 
 2. Scroll down and navigate to Pipeline then select "pipeline script from SCM"
    ![img_2.png](img_2.png)
 3. Select Git
    ![img_3.png](img_3.png)
-4. Paste the URL and click Apply and Save
+4. Paste the Repo URL and click Apply and Save
    ![img_4.png](img_4.png)
 5. Click build now
    ![img_5.png](img_5.png)

@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0100687-65e5-4c21-b2ef-518b48134553" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/appointment_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/appointment_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +52,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare\utilities" />
       <recent name="C:\Users\Rochell-Stampede\PycharmProjects\curaHealthCare\tests" />
