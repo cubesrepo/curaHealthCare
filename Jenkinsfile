@@ -17,30 +17,38 @@ pipeline{
         }
         stage("Install dependencies and setup"){
             steps{
-                bat '''
+                echo "Setting up python environment"
+                bat """
                 python -m venv ${VENV_DIR}
                 call ${VENV_ACTIVATE}
                 pip install -r utilities/requirements.txt
-                '''
+                """
             }
         }
         stage("Run tests"){
             steps{
-                bat '''
+                echo "Running selenium pytest tests..."
+                bat """
                 call ${VENV_ACTIVATE}
-                pytest -m login
-                --alluredir=${ALLURE_REPORT} --headless
-                '''
+                pytest -m login --alluredir=${ALLURE_REPORT} --headless
+                """
             }
         }
     }
     post {
         always {
+            echo "Generating Allure report.."
             allure([
                 includeProperties: false,
                 jdk: '',
                 results: [[path: '${ALLURE_REPORT}']]
             ])
+        }
+        success{
+            echo "Test passed successfully!"
+        }
+        failure{
+            echo "Test failed!"
         }
     }
 }
