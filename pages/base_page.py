@@ -18,26 +18,29 @@ class BasePage:
     def wait(self, condition):
         return WebDriverWait(self.driver, self.timeout).until(condition)
 
-    def wait_visibility(self, locator):
+    def wait_visibility(self, locator, retries=2):
         time.sleep(self.delay)
-        try:
-            element = self.wait(EC.visibility_of_element_located(locator))
-            self.logger.info(f"Element is visible: {locator}")
-        except TimeoutException:
-            self.logger.info(f"Element: {locator} is not found after {self.timeout}")
-            element = None
-        return element
+        for attempt in range(1, retries+1):
+            try:
+                element = self.wait(EC.visibility_of_element_located(locator))
+                self.logger.info(f"Element is visible: {locator}")
+                return element
+            except TimeoutException:
+                self.logger.info(f"Element: {locator} is not found after {self.timeout}")
+        self.logger.warning(f"Element: {locator} is not found after {retries} retries")
+        return None
 
-    def wait_clickable(self, locator):
+    def wait_clickable(self, locator, retries=2):
         time.sleep(self.delay)
-        try:
-            element = self.wait(EC.element_to_be_clickable(locator))
-            self.logger.info(f"Element is clickable: {locator}")
-        except TimeoutException:
-            self.logger.info(f"Element: {locator} is not found after {self.timeout}")
-            element = None
-
-        return element
+        for attempt in range(1, retries+1):
+            try:
+                element = self.wait(EC.element_to_be_clickable(locator))
+                self.logger.info(f"Element is clickable: {locator}")
+                return element
+            except TimeoutException:
+                self.logger.info(f"Element: {locator} is not found after {self.timeout}")
+        self.logger.warning(f"Element: {locator} not found after {retries} retries")
+        return None
 
     def type(self, locator, value):
 
