@@ -93,8 +93,16 @@ def pytest_runtest_makereport(item, call):
 
 def browser_setup(headless,service, options, web_browser):
     if headless:
-        options.add_argument("--headless")
-        options.add_argument("--window-size=1920, 1080")
+        options.add_argument("--headless=new")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--disable-gpu")
+        options.add_argument("--disable-extensions")
+        options.add_argument("--disable-infobars")
+        options.add_argument("--start-maximized")
+        options.add_argument("--disable-blink-features=AutomationControlled")
+        options.add_argument("--enable-features=NetworkService,NetworkServiceInProcess")
         driver = web_browser(service=service, options=options)
     else:
         prefs = {
