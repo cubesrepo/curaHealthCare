@@ -4,7 +4,7 @@ pipeline{
     environment{
         PYTHON_VERSION = "3.11.9"
         VENV_DIR = "virtualenv"
-        VENV_ACTIVATE "${VENV_DIR}\\Scripts\\activate"
+        VENV_ACTIVATE = "${VENV_DIR}\\Scripts\\activate"
         ALLURE_REPORT = "reports/T1"
     }
     stages{
@@ -42,12 +42,12 @@ pipeline{
 
             ])
             echo "Cleaning up workspace"
-            cleanWs
+            cleanWs()
         }
         success{
             echo "✅ Tests passed successfully!"
         }
-        failed{
+        failure{
             echo "❌ Tests failed!"
         }
     }
