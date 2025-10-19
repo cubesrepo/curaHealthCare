@@ -30,7 +30,7 @@ class appointment:
     YEAR_HEADER = By.CSS_SELECTOR, "div[class='datepicker-years'] th[class='datepicker-switch']"
     YEAR_2026 = By.XPATH, "//span[normalize-space()='2026']"
     MONTH = By.XPATH, "//span[@class='month' and text()='Dec']"
-    DAY_25 = By.CSS_SELECTOR, "//td[@class='day' and text()='25']"
+    DAY_25 = By.XPATH, "//td[normalize-space()='25']"
 
     YEAR_2024 = By.XPATH, "//span[normalize-space()='2024']"
     MONTH_MARCH = By.XPATH, "//span[@class='month' and text()='Mar']"
