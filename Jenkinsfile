@@ -40,7 +40,7 @@ pipeline{
             allure([
                 includeProperties: False,
                 jdk: '',
-                results: [[path: "${ALLURE_REPORT}"]
+                results: [[path: "${ALLURE_REPORT}"]]
 
             ])
             echo "Cleaning up workspace"
