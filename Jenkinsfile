@@ -1,4 +1,3 @@
-
 pipeline{
     agent any
 
@@ -7,7 +6,6 @@ pipeline{
         VENV_DIR = "virtualenv"
         VENV_ACTIVATE "${VENV_DIR}\\Scripts\\activate"
         ALLURE_REPORT = "reports/T1"
-
     }
     stages{
         stage("Checkout"){
@@ -34,7 +32,7 @@ pipeline{
             }
         }
     }
-    posts{
+    post{
         always{
             echo "Generating Allure report"
             allure([
