@@ -59,6 +59,7 @@ class BasePage:
     def get_text(self, locator):
 
         element = self.wait_visibility(locator)
+        self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
         if element:
             text = element.text
             self.logger.info(f"The element:{locator} has text: {text}")

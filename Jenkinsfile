@@ -36,7 +36,7 @@ pipeline{
         always{
             echo "Generating Allure report"
             allure([
-                includeProperties: False,
+                includeProperties: false,
                 jdk: '',
                 results: [[path: "${ALLURE_REPORT}"]]
 

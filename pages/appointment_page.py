@@ -1,3 +1,5 @@
+from selenium.common import ElementClickInterceptedException, ElementNotInteractableException
+
 from utilities import test_data
 from pages.base_page import BasePage
 import time
@@ -21,11 +23,14 @@ class AppointmentPage(BasePage):
     def pick_date(self):
         locators = ['DATE',
                     'DAYS_HEADER',
-                    'MONTH',
+                    'MONTH_DEC',
                     'DAY_25']
         for locator in locators:
+
             element_locator = getattr(test_data.appointment, locator)
-            self.wait_visibility(element_locator).click()
+            element = self.wait_clickable(element_locator)
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            element.click()
 
     def pick_past_date(self):
         locators = ['DATE',
