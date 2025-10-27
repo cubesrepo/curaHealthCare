@@ -1,4 +1,4 @@
-**Hello**🖐 **Automated Testing for Curahealthcare Demo Website with Selenium (Pytest, Page Object Model(POM), Allure Reports, Jenkins Pipeline)**
+**Hello**🖐 **Automated Testing for Curahealthcare Demo Website with (Selenium, Pytest, Page Object Model(POM), Allure Reports, Jenkins Pipeline)**
 
 This project automates the testing of Cura Healthcare Service, covering key features such as login, appointment booking, and viewing history.
 
